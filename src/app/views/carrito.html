@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<br>
+<div *ngIf="!products">
+    Cargando productos
+</div>
+<div *ngIf="products">
+    <ul>
+        <div class="content" *ngFor="let product of products">
+            <img src={{product.imagen}} style="width:250px; height:20%" />
+            <ul class="contData">
+                <strong class="dataNombre">{{product.nombre}}</strong>
+                <li class="data">Precio unitario: {{product.precio}}</li>
+                <li class="data">Categoria:{{product.categoria}}</li>
+                <li class="data">Cantidad: {{product.cantidadCar}}</li>
+            <br>
+            <a (click)="onDelete(product.id)"  class="fa fa-minus-circle minus"  aria-hidden="true"></a>
+            </ul> 
+        </div>
+    </ul>
+</div>
+
+<style type="text/css">
+
+    .content{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(255,255,255);
+        position: relative;
+        height: 100%;
+        width: 100%;
+        padding: 18px 18px 30px;
+        flex: 1 1 0%;
+        border-left: none
+    }
+    
+    .contData{
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+    }
+    
+    .data{
+        position: relative;
+        padding-left: 5px;
+        margin-bottom: 2px;
+        font-size: 14px;
+        line-height: 12px;
+    }
+    .dataNombre{
+        position: relative;
+        padding-left: 5px;
+        margin-bottom: 2px;
+        font-size: 17px;
+        line-height: 12px;
+    }
+    
+    .minus{
+        position: relative;
+        padding-left: 5px;
+        margin-bottom: 2px;
+        font-size: 25px;
+        line-height: 12px;
+        cursor:grab;
+        color: red !important;
+    
+    }
+
+    .linea{
+      border-top: 1px solid black;
+      height: 2px;
+      max-width: 200px;
+      padding: 0;
+      margin: 20px auto 0 auto;
+    }
+</style>
