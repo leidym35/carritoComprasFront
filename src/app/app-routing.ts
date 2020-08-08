@@ -5,9 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProductsComponent } from './components/productos.component';
 import { CarComponent } from './components/carrito.component';
 import { HomeComponent } from './components/home.component';
-
+//Se declara rutas y componentes al que accede 
 const appRoutes: Routes = [
-  { path: 'productos', component: ProductsComponent }, 
+  { path: 'productos', component: ProductsComponent },
   { path: 'carrito', component: CarComponent },
   { path: 'home', component: HomeComponent }
 ];

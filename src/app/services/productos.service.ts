@@ -12,9 +12,11 @@ export class ProductsService {
     ) {
         this.url = GLOBAL.url
     }
+    //Se encarga de realizar la petición get al servicio, obtiene los productos
     getProduct() {
         return this._http.get(this.url + 'productos').map(res => (res))
     }
+    //Se encarga de realizar la petición get al servicio, agrega los productos al carrito
     addProductCar(id) {
         return this._http.get(this.url + 'carritoAdd/' + id).map(res => (res))
     }

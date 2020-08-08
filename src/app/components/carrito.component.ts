@@ -18,8 +18,8 @@ export class CarComponent {
     ngOnInit() {
         this.getListCar()
     }
-/*  La siguiente Funcion llama el servicio CarService y accede a getProductCar permite
-    listar los productos que se encuentran en el carrito */
+    /*  La siguiente Funcion llama el servicio CarService y accede a getProductCar permite
+        listar los productos que se encuentran en el carrito */
     getListCar() {
         this._carService.getProductCar().subscribe(
             result => {
@@ -30,8 +30,8 @@ export class CarComponent {
             }
         );
     }
-/*  La siguiente Funcion llama el servicio CarService y accede deleteProductCar permite
-    eliminar los productos que se encuentran en el carrito por id */
+    /*  La siguiente Funcion llama el servicio CarService y accede deleteProductCar permite
+        eliminar los productos que se encuentran en el carrito por id */
     onDelete(id) {
         this._carService.deleteProductCar(id).subscribe(
             response => {

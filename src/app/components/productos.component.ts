@@ -16,8 +16,8 @@ export class ProductsComponent {
   ngOnInit() {
     this.getListProducts()
   }
-/*  La siguiente Funcion llama el servicio _productsService y accede a getProduct permite
-    listar los productos */
+  /*  La siguiente Funcion llama el servicio _productsService y accede a getProduct permite
+      listar los productos */
   getListProducts() {
     this._productsService.getProduct().subscribe(
       result => {
@@ -28,8 +28,8 @@ export class ProductsComponent {
       }
     );
   }
-/*  La siguiente Funcion llama el servicio _productsService y accede a addProductCar permite
-    agregar productos al carrito */
+  /*  La siguiente Funcion llama el servicio _productsService y accede a addProductCar permite
+      agregar productos al carrito */
   onAdd(id) {
     this._productsService.addProductCar(id).subscribe(
       response => {
